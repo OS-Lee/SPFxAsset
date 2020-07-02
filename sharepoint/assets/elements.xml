@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+<Field 
+    ID="{68CF0545-6C14-41A4-89FB-AC1E658F9D6D}"
+    Name="TestFieldLK"
+    StaticName="TestFieldLK"
+    Group="Vendor Fields"
+    Type="Lookup"
+    DisplayName="Test Field LK"
+    List="Lists/PurchaseOrders"
+    ShowField="Title" 
+/>
+
+<ContentType ID="0x01006D76FCC446144618BC3E1B3AC4015F8A"
+        Name="CTTestSPFX"
+        Group="CTTestSPFX"
+        Description="Sample content types from web part solution">
+    <FieldRefs>
+    <FieldRef ID="{68CF0545-6C14-41A4-89FB-AC1E658F9D6D}"/>
+    </FieldRefs>
+</ContentType>
+<ContentType ID="0x01006D76FCC446144618BC3E1B3AC4015F8B"
+        Name="CTOOBSPFX"
+        Group="CTTestSPFX"
+        Description="Sample content types from web part solution">
+    <FieldRefs>    
+    </FieldRefs>
+</ContentType>
+<ListInstance
+        CustomSchema="schemaPurchaseOrder.xml"
+        FeatureId="00bfea71-de22-43b2-a848-c05709900100"
+        Title="Purchase Orders"
+        Description="Purchase Orders List"
+        TemplateType="100"
+        Url="Lists/PurchaseOrders">
+</ListInstance>
+<ListInstance
+        CustomSchema="schema.xml"
+        FeatureId="00bfea71-de22-43b2-a848-c05709900100"
+        Title="SPFx List"
+        Description="SPFx List"
+        TemplateType="100"
+        Url="Lists/SPFxList">
+</ListInstance>
+</Elements>

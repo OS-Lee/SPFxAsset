@@ -1,0 +1,32 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "sp-fx-asset-client-side-solution",
+    "id": "0a5d7342-6907-42c0-aa6c-eb973cbca255",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    // >>> START
+    //     add the following to the package-solution.json file
+    "features": [{
+      "title": "asset-deployment-webpart-client-side-solution",
+      "description": "asset-deployment-webpart-client-side-solution",
+      "id": "49660bfb-1338-4c9d-b884-e42ec636ebf6",     // <-- Update new GUID
+      "version": "1.0.0.0",
+      "assets": {
+        "elementManifests": [
+          "elements.xml"
+        ],
+        "elementFiles":[
+          "schema.xml",
+          "schemaPurchaseOrder.xml"
+        ]
+      }
+    }]
+    // <<< END
+  },
+  "paths": {
+    "zippedPackage": "solution/sp-fx-asset.sppkg"
+  }
+}
